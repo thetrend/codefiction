@@ -59,8 +59,13 @@ p.indented {
 .page.content {
   display: flex;
   flex-flow: column nowrap;
+  flex-direction: column-reverse;
   margin: 0 4%;
   flex-grow: 2;
+}
+
+.page.content > article.container {
+  margin-bottom: 2rem;
 }
 
 .page.footer {
@@ -74,6 +79,26 @@ p.indented {
 
 header.article {
   margin-bottom: 20px;
+}
+
+header.article > small {
+  display: block;
+}
+
+h2.tagline {
+  animation: animate 3.0s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 
 /* anything bigger than an ipad until 1000px */
